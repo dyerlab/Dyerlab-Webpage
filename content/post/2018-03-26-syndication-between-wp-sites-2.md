@@ -6,7 +6,7 @@ categories:
   - Syndication
   - Teaching
 tags:
-  - '#dyerlab'
+  - dyerlab
 ---
 <div class='e-content'>
   <p>
