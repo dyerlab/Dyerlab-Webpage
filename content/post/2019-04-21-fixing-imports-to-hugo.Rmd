@@ -1,0 +1,63 @@
+---
+title: Fixing Imports to Hugo
+date: '2019-04-21'
+slug: fixing-imports-to-hugo
+categories:
+  - IndieWeb
+tags:
+  - R
+  - '#dyerlab'
+
+---
+
+The solution to this, is to recognize that a lot of the content I make (in fact most of it) will be presented as output from R Markdown.  The tutorials I create, the analyses I do, etc.  As such, why not start with an R Markdown file in the first place and go from there?  Enter `blogdown`
+
+
+```{r eval=FALSE}
+devtools::install_github("rstudio/blogdown")
+```
+
+I then had to install python3 and pip to get the `academic` Hugo theme going.
+
+```{bash eval=FALSE}
+brew update
+brew install python3
+pip3 install academic
+```
+
+I then went and grabbed a BibTex file of my publications from Web Of Science.  Not all of them are there but it gets things going.  Then I had the hugo academic import them into the site.
+
+```{bash eval=FALSE}
+academic import --bibtex ~/Downloads/savedrecs.bib 
+```
+
+I quickly noticed a flaw in this approach as Web of Sciences labels each of the entries with the ISI number, which academic uses for naming within Hugo.  This means absolutely nothing to me (e.g., instead of `DyerNason2004` that manuscript is noted as `ISI:000221933000001`---totally useless).  So, I went back to the file and manually changed the entry titles.  Not a big deal.
+
+I then imported them using the code above and it was good.  I got a folder 
+
+![](/post/2019-04-21-fixing-imports-to-hugo_files/folders_of_publication_folders.png)
+
+Now, to go fix a few other things.
+
+## Fixing tags
+
+By default, the import mechanism uses a semicolon separated list of tags from the keywords for each publication.  Hugo assumes everything is just one long set of tag identifiers so tags like, *gene flow*, *popgraph*, and *genetic structure* are imported into Hugo as *gene-flow-popgraph-genetic-structure*, which is not the right thing.  So I wrote the following quick script to loop though all the files just created make the right changes.
+
+```{r eval=FALSE}
+files = list.files("./content/publications/", pattern="index.md",full.names = TRUE,recursive = TRUE)
+files
+for( file in files ) {
+  print(file)
+  f <- readr::read_file(file=file)
+  lines <- strsplit(f,"\n")
+  idx <- which(lapply(lines, function(x) grepl("^tags", x) )[[1]])
+  if( length(idx) > 0 ) {
+    lines[[1]][idx] <- stringr::str_replace_all(lines[[1]][idx], "; ", '\", \"')
+    f <- paste(lines[[1]], collapse="\n")
+    readr::write_file(f,path=file)
+  }
+}
+```
+
+
+

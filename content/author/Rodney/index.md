@@ -19,15 +19,14 @@ education:
     year: 1994
 email: "rjdyer@vcu.edu"
 interests:
-- Population & Landscape Genetics
-- Gene Flow & Connectivity
-- Data Literacy & Analytics
-- Programming software that doesn't suck
+- Gene Flow
+- Connectivity
+- Programming
 name: Rodney J. Dyer
 organizations:
 - name: Virginia Commonwealth University
   url: "https://ces.vcu.edu"
-role: Director of the Center for Environmental Studies
+role: Principal Investigator
 social:
 - icon: envelope
   icon_pack: fas
@@ -43,7 +42,7 @@ social:
   link: https://github.com/dyerlab 
 superuser: true
 user_groups:
-- Principal Investigators
+- Laboratory Members
 ---
 
 Rodney Dyer research interests include understanding how landscape configuration and alteration influence connectivity amongst native and introduced species.  This interest has led him develop expertise in theoretical and applied population & landscape genetics as well as developing novel methodologies and statistical tools necessary for understanding the spatial and ecological distribution of population genetic structure.

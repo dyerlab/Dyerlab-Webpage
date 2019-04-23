@@ -3,9 +3,10 @@ name: Jane Remfert
 email: "remfertjl@mymail.vcu.edu"
 active: true
 authors: "Jane"
+date: 2019-01-04
 role: Doctoral Candidate
 user_groups:
-- Graduate Students
+- Laboratory Members
 organizations:
 - name: Virginia Commonwealth University
   url: "https://ces.vcu.edu"

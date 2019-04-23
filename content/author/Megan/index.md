@@ -2,10 +2,11 @@
 name: Megan Kuechle
 email: "kuechlema@mymail.vcu.edu"
 active: true
+date: 2019-01-03
 authors: "Megan"
 role: Masters Candidate
 user_groups:
-- Graduate Students
+- Laboratory Members
 organizations:
 - name: Virginia Commonwealth University
   url: "https://ces.vcu.edu"
