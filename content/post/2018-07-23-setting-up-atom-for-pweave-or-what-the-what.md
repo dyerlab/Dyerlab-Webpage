@@ -4,12 +4,13 @@ date: 2018-07-23T15:48:06+00:00
 categories:
   - Technology
 tags:
-  - '#dyerlab'
+  - dyerlab
   - software
 ---
 So as a way to expand some of the analytical tools we offer the students at my work, I'm developing a version of my Data Literacy course that will use Python as well as R.  There is a lot of overlap in these two languages and both are of interest to our students as they develop their toolkits.  This document walks through how to set up Pweave on your machine so you can engage in a little _Literate Programming_ (trust me, it will make your life suck a lot less.  To see how to set up Atom, see my [previous post](https://rodneydyer.com/2018/06/20/the-atom-editor/).
 
 ## Literate Programming
+
 
 <blockquote class="wp-block-quote">
   <p>

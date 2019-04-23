@@ -4,8 +4,9 @@ date: 2018-05-11T10:34:03+00:00
 categories:
   - Uncategorized
 tags:
-  - '#dyerlab'
+  - dyerlab
 ---
+
 Some awesome presentations by lab members at today's research symposium.
 
 Bonnie Roderique speaking about the James Spinymussel.

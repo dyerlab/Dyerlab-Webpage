@@ -8,7 +8,7 @@ categories:
   - People
   - Research
 tags:
-  - '#dyerlab'
+  - dyerlab
   - cGD
   - common garden
   - dogwood

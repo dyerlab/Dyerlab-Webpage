@@ -5,16 +5,13 @@ categories:
   - Evernote
   - Technology
 tags:
-  - '#dyerlab'
+  - dyerlab
   - software
 ---
 <div>
   <img src="https://locker.ifttt.com/v2/6471854/1529502098516-7188915696ef52db/b4eb36ac38277ba03d724b9255d610d0490c0037bbab93a0d59e2ba8987154d4/285507c1-07ef-4cb0-b0fa-4bfb29559dd0?sharing_key=cb9e9fcf4c6fa73363e076a3fdefe1dc" width="1214" height="1061" />
 </div>
 
-<div>
-   
-</div>
 
 <div>
   Being new to the Windows platform, I'm on the look for a good text editor that can do the myriad of tasks that we do each day.  Notepad is not an option, let's be real.  I'm looking for something that can be extended and has been designed from the bottom up for wrangling text and writing code.  Ultimately, I would like something that is amenable to teaching both R and Python using a single interface.  RStudio is great for R but sucks for Python.  Juypter notebooks are clunky and toy-like.

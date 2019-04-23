@@ -6,8 +6,7 @@ categories:
   - IndieWeb
 tags:
   - R
-  - '#dyerlab'
-
+  - dyerlab
 ---
 
 The solution to this, is to recognize that a lot of the content I make (in fact most of it) will be presented as output from R Markdown.  The tutorials I create, the analyses I do, etc.  As such, why not start with an R Markdown file in the first place and go from there?  Enter `blogdown`

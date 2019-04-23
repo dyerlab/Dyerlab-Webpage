@@ -4,11 +4,12 @@ date: 2018-07-19T13:14:45+00:00
 categories:
   - Uncategorized
 tags:
-  - '#dyerlab'
+  - dyerlab
 ---
 This is such a common thing to do these days, it is easier to just post this here rather than search through my class notes each time someone asks me how to do this.
 
 Here is the issue.  Say you have some data associated with your research project and are adding to it and doing analyses.  Chances are, you have it shoved into an Excel spreadsheet that is on your laptop, your home computer, the computer in the lab, a backup disk (you are keeping backups, right?), and even perhaps shared on a Cloud Drive with your collaborators/advisors/partner/whatever.  Great!  Now you have absolutely no way to know which version of the dataset is the real one and which are **wrong**.
+
 
 ## Publishing Spreadsheets from Google Drive
 
