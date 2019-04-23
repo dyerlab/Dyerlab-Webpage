@@ -43,7 +43,7 @@ social:
   link: https://github.com/dyerlab 
 superuser: true
 user_groups:
-- Researchers
+- Principal Investigators
 ---
 
 Rodney Dyer research interests include understanding how landscape configuration and alteration influence connectivity amongst native and introduced species.  This interest has led him develop expertise in theoretical and applied population & landscape genetics as well as developing novel methodologies and statistical tools necessary for understanding the spatial and ecological distribution of population genetic structure.
