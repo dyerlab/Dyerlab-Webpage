@@ -1,20 +1,20 @@
 # Theme metadata
-name = "Default"
+name = "dyerlab"
 
 # Is theme light or dark?
 light = true
 
 # Primary
-primary = "#bdbf09"
-primary_light = "#ababab"
-primary_dark = "#eoeoeo"
+primary = "#a3b18a"
+primary_light = "#dad7cd"
+primary_dark = "#253031"
 
 # Menu
 menu_primary = "#e0e0e0"
-menu_text = "#bdbf09"
-menu_text_active = "#2292a4"
-menu_title = "#d96c06"
+menu_text = "#a3b18a"
+menu_text_active = "#588157"
+menu_title = "#414073"
 
 # Home sections
-home_section_odd = "#0f0a0a"
-home_section_even = "#f5efed"
+home_section_odd = "#253031"
+home_section_even = "#dad7cd"
