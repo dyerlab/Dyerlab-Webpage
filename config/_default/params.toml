@@ -4,6 +4,7 @@
 # Color theme.
 #   Choose from `default`, `ocean`, `forest`, `dark`, `apogee`, `1950s`, `coffee`, `cupcake`.
 color_theme = "default"
+
 # Enable users to switch between day and night mode?
 day_night = true
 
@@ -23,6 +24,8 @@ twitter = "dyerlab"
 # Diplay a logo in navigation bar rather than title (optional).
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
 logo = ""
+title = "Dyer Laboratory"
+name = "Dyer Laboratory"
 
 # Enable global source code highlighting? true/false
 # Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
