@@ -3,7 +3,7 @@
 widget = "slider"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 1  # Order that this section will appear.
+weight = 100  # Order that this section will appear.
 
 # Slide interval.
 # Use `false` to disable animation or enter a time in ms, e.g. `5000` (5s).
@@ -11,42 +11,26 @@ interval = 5000
 
 # Minimum slide height.
 # Specify a height to ensure a consistent height for each slide.
-height = "240px"
+height = "400px"
 
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/RiceCenter.jpg"  
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/CrabtreeFalls.jpg"  
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/LochLomond.jpg"  
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/IndianKey.jpg"  
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/Senote.jpg"  
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/ShaleBarren.jpg"  
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/VirginIslands.jpg"  
 [[item]]
-  title = "the Dyer Laboratory"
-  align = "right"
   overlay_img = "headers/Wales.jpg"  
 
 
