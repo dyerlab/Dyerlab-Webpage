@@ -2,8 +2,6 @@ baseurl = "/"
 languageCode = "en-us"
 theme = "hugo-theme-hello-friend"
 paginate = 5
-ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
-
 
 [params]
   # dir name of your blog content (default is `content/posts`)
@@ -14,12 +12,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   showMenuItems = 2
   # Enable to show reading time in minutes for posts
   showReadingTime = false
-  
 
 [languages]
   [languages.en]
-    title = "the Dyer Laboratory"
-    subtitle = ""
+    title = "Hello Friend"
+    subtitle = "A simple theme for Hugo"
     keywords = ""
     copyright = ""
     menuMore = "Show more"
@@ -33,7 +30,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
     dateFormatList = "2006-01-02"
 
     [languages.en.params.logo]
-      logoText = "dyer laboratory"
+      logoText = "hello friend"
       logoHomeLink = "/"
     # or
     #
@@ -45,10 +42,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
         identifier = "about"
         name = "About"
         url = "/about"
-      [[languages.en.menu.main]]
-        identifier = "Papers"
-        name = "Papers"
-        url = "/papers"
       [[languages.en.menu.main]]
         identifier = "showcase"
         name = "Showcase"

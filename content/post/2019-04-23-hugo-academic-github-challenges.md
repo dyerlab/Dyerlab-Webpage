@@ -8,6 +8,7 @@ categories:
 tags:
   - blogdown
   - hugo
+cover: "/img/hello.jpg"
 ---
 
 So one of the things I found to be necessary is that when you clone the git repository for academic-kickstarter, you need to give the following command in your root directory.
