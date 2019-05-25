@@ -19,7 +19,7 @@ I just ran across an R package that allows you to integrate your R workflow into
 
 <!--more-->
 
-[<img class="aligncenter size-medium wp-image-1022" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM-300x141.png" alt="Screen Shot 2016-07-08 at 11.17.56 AM" width="300" height="141" srcset="http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM-300x141.png 300w, http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM-768x362.png 768w, http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM.png 968w" sizes="(max-width: 300px) 100vw, 300px" />](http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM.png)
+[<img class="aligncenter size-medium wp-image-1022" src="wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM-300x141.png" alt="Screen Shot 2016-07-08 at 11.17.56 AM" width="300" height="141" srcset="wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM-300x141.png 300w, wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM-768x362.png 768w, wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM.png 968w" sizes="(max-width: 300px) 100vw, 300px" />](wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-11.17.56-AM.png)
 
 First things first, I recommend installing the latest version from the [github](https://github.com/hrbrmstr/slackr) repository.
 
@@ -42,7 +42,7 @@ slackr("This is an incoming piece of text from RStudio")</pre>
 
 Which results in the following in my #r slack channel:
 
-[<img class="aligncenter wp-image-1028 size-full" src="http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM.png" alt="Screen Shot 2016-07-08 at 1.41.41 PM" width="727" height="91" srcset="http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM.png 727w, http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM-300x38.png 300w" sizes="(max-width: 727px) 100vw, 727px" />](http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM.png)
+[<img class="aligncenter wp-image-1028 size-full" src="wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM.png" alt="Screen Shot 2016-07-08 at 1.41.41 PM" width="727" height="91" srcset="wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM.png 727w, wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM-300x38.png 300w" sizes="(max-width: 727px) 100vw, 727px" />](wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.41.41-PM.png)
 
 There is also a provision for sending output graphics like ggplot objects.  Here is an example of heterozygosity in the Arapat data set.
 
@@ -56,7 +56,7 @@ ggslack(p)
 
 Which directly uploads the image to the channel as:
 
-[<img class="aligncenter wp-image-1029 size-full" src="http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM.png" alt="Screen Shot 2016-07-08 at 1.46.04 PM" width="380" height="422" srcset="http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM.png 380w, http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM-270x300.png 270w" sizes="(max-width: 380px) 100vw, 380px" />](http://localhost/wordpress/wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM.png)
+[<img class="aligncenter wp-image-1029 size-full" src="wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM.png" alt="Screen Shot 2016-07-08 at 1.46.04 PM" width="380" height="422" srcset="wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM.png 380w, wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM-270x300.png 270w" sizes="(max-width: 380px) 100vw, 380px" />](wp-content/uploads/2016/07/Screen-Shot-2016-07-08-at-1.46.04-PM.png)
 
 Very Cool!
 

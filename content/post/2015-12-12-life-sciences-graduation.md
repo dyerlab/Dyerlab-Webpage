@@ -11,6 +11,6 @@ Life Sciences Graduation ceremony is [here](https://drive.google.com/open?id=0B0
 
 <!--more-->
 
-<img class="aligncenter size-medium wp-image-722" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/download-300x225.png" alt="download" width="300" height="225" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/download-300x225.png 300w, http://localhost/wordpress/wp-content/uploads/2015/12/download.png 480w" sizes="(max-width: 300px) 100vw, 300px" /> 
+<img class="aligncenter size-medium wp-image-722" src="wp-content/uploads/2015/12/download-300x225.png" alt="download" width="300" height="225" srcset="wp-content/uploads/2015/12/download-300x225.png 300w, wp-content/uploads/2015/12/download.png 480w" sizes="(max-width: 300px) 100vw, 300px" /> 
 
 &nbsp;

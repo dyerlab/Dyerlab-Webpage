@@ -12,7 +12,7 @@ tags:
 ---
 A very cool writeup on making blow out maps.
 
-[<img class="aligncenter wp-image-926 size-full" src="http://localhost/wordpress/wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67.png" alt="687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67" width="900" height="600" srcset="http://localhost/wordpress/wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67.png 900w, http://localhost/wordpress/wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67-300x200.png 300w, http://localhost/wordpress/wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67-768x512.png 768w" sizes="(max-width: 900px) 100vw, 900px" />](http://urbandemographics.blogspot.co.uk/2016/04/creating-tilted-and-stacked-maps-in-r.html)
+[<img class="aligncenter wp-image-926 size-full" src="wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67.png" alt="687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67" width="900" height="600" srcset="wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67.png 900w, wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67-300x200.png 300w, wp-content/uploads/2016/04/687474703a2f2f692e737461636b2e696d6775722e636f6d2f336c6241542e706e67-768x512.png 768w" sizes="(max-width: 900px) 100vw, 900px" />](http://urbandemographics.blogspot.co.uk/2016/04/creating-tilted-and-stacked-maps-in-r.html)
 
 <http://urbandemographics.blogspot.co.uk/2016/04/creating-tilted-and-stacked-maps-in-r.html>
 

@@ -68,7 +68,7 @@ bc
     <pre class="lang:r decode:true ">plot(bc)</pre>
     
     <p>
-      <img class="aligncenter wp-image-865 size-large" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-1024x604.png" alt="Screen Shot 2016-03-18 at 1.33.39 PM" width="768" height="453" srcset="http://localhost/wordpress/wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-1024x604.png 1024w, http://localhost/wordpress/wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-300x177.png 300w, http://localhost/wordpress/wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-768x453.png 768w, http://localhost/wordpress/wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1.png 1552w" sizes="(max-width: 768px) 100vw, 768px" />
+      <img class="aligncenter wp-image-865 size-large" src="wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-1024x604.png" alt="Screen Shot 2016-03-18 at 1.33.39 PM" width="768" height="453" srcset="wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-1024x604.png 1024w, wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-300x177.png 300w, wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1-768x453.png 768w, wp-content/uploads/2016/03/Screen-Shot-2016-03-18-at-1.33.39-PM-1.png 1552w" sizes="(max-width: 768px) 100vw, 768px" />
     </p>
   </div>
 </div>

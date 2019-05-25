@@ -1,0 +1,102 @@
+---
+title: Extracting Data from Rasters
+date: 2015-01-10T07:58:18+00:00
+guid: http://rampages.us/dyerlab/?p=278
+permalink: /2015/01/10/extracting-data-from-rasters/
+categories:
+  - Code
+  - Tutorials
+tags:
+  - Araptus attenuata
+  - Baja California
+  - ggplot2
+  - R
+  - raster
+---
+This document shows you how to extract data from rasters.
+
+&nbsp;
+
+## Getting The Libraries
+
+First, I'll load in some packages to get the ability to work with raster data and to load in the _Arapatus attenuatus_ data set (it is part of the default **gstudio** package).
+
+```{r}
+require(raster)
+require(gstudio)
+```
+
+
+## Loading and Cropping Rasters
+
+We can load in the raster, and then crop it to just the are we need. These rasters were downloaded from [[http://www.worldclim.org](http://www.worldclim.org/)] and are much larger than the study area. This just makes it easier on the computer to not have to deal with such large areas. After cropping it, we will load in the annual precip and temperature data as well.
+
+```{r}
+tmp <- raster("alt_22.tif")
+e <- extent(c(-115, -109, 22, 30))
+baja_alt <- crop(tmp, e)
+baja_temp <- crop(raster("bio1_22.tif"), e)
+baja_prec <- crop(raster("bio12_22.tif"), e)
+```
+
+
+## Getting Example Data from _Araptus attenuatus_
+
+Now, lets grab the _Araptus_ data and look at the data and plot out the locations.
+
+```{r}
+data(arapat)
+summary(arapat)
+```
+
+
+
+```{r}
+library(ggplot2)
+library(ggmap)
+coords <- strata_coordinates(arapat)
+map <- population_map(coords, map.source = "stamen")
+ggmap( map ) + geom_point(aes(x=Longitude,y=Latitude), data=coords)
+```
+
+
+## Extracting Point Data
+
+To elevation, temperature and precipitation from the rasters for each sampling location, we need to translate them into points first. I'll first grab the coordinate data as a _data.frame_.
+
+
+Then we can grab them using the normal functions in the **sp** library.
+
+```{r}
+pts <- SpatialPoints(coords[, 2:3])
+coords$elev <- extract(baja_alt, pts)
+coords$temp <- extract(baja_temp, pts)
+coords$prec <- extract(baja_prec, pts)
+coords
+```
+
+
+## Plotting Trend lines.
+
+Cool, lets sort this by latitude
+
+```{r}
+coords <- coords[order(coords$Latitude), ]
+```
+
+and then plot out some values to look at what is going on.
+
+```{r}
+ggplot(coords, aes(x = Latitude, y = elev)) + geom_line(color = "gray") + theme_bw() + geom_text(aes(y = elev + 10, label = Stratum), color = "blue")
+```
+
+
+```{r}
+ggplot(coords, aes(x = Latitude, y = temp)) + geom_line(color = "gray") + theme_bw() + geom_text(aes(y = temp + 5, label = Stratum), color = "blue")
+```
+
+
+```{r}
+ggplot(coords, aes(x = Latitude, y = prec)) + geom_line(color = "gray") + theme_bw() + geom_text(aes(y = prec + 10, label = Stratum), color = "blue")
+```
+

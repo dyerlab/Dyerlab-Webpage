@@ -55,7 +55,7 @@ alt
 ## names       : alt_22
 values      : -202, 5469  (min, max)</pre>
 
-which looks like.<img class="aligncenter wp-image-872 size-large" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2016/03/Unknown-1-1024x731.png" alt="Unknown-1" width="768" height="548" srcset="http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-1-1024x731.png 1024w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-1-300x214.png 300w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-1-768x549.png 768w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-1.png 1344w" sizes="(max-width: 768px) 100vw, 768px" />
+which looks like.<img class="aligncenter wp-image-872 size-large" src="wp-content/uploads/2016/03/Unknown-1-1024x731.png" alt="Unknown-1" width="768" height="548" srcset="wp-content/uploads/2016/03/Unknown-1-1024x731.png 1024w, wp-content/uploads/2016/03/Unknown-1-300x214.png 300w, wp-content/uploads/2016/03/Unknown-1-768x549.png 768w, wp-content/uploads/2016/03/Unknown-1.png 1344w" sizes="(max-width: 768px) 100vw, 768px" />
 
 We can crop it to the bounding box for the points as:
 
@@ -74,7 +74,7 @@ pts <- SpatialPoints( coords[,2:3] )
 plot(bc, xlab="Longitude", ylab="Latitude")
 points( pts, col="darkred", pch=16)</pre>
 
-<img class="aligncenter wp-image-873 size-large" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2016/03/Unknown-2-1024x731.png" alt="Unknown-2" width="768" height="548" srcset="http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-2-1024x731.png 1024w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-2-300x214.png 300w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-2-768x549.png 768w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-2.png 1344w" sizes="(max-width: 768px) 100vw, 768px" /> 
+<img class="aligncenter wp-image-873 size-large" src="wp-content/uploads/2016/03/Unknown-2-1024x731.png" alt="Unknown-2" width="768" height="548" srcset="wp-content/uploads/2016/03/Unknown-2-1024x731.png 1024w, wp-content/uploads/2016/03/Unknown-2-300x214.png 300w, wp-content/uploads/2016/03/Unknown-2-768x549.png 768w, wp-content/uploads/2016/03/Unknown-2.png 1344w" sizes="(max-width: 768px) 100vw, 768px" /> 
 
 # A Convex Hull Approach
 
@@ -97,7 +97,7 @@ plot(baja_pts,add=T,col="darkred")
 plot(baja_pts,add=T,col="darkred",pch=16)
 plot(hull,add=T,border="green")</pre>
 
-<img class="aligncenter wp-image-875 size-large" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2016/03/Unknown-3-1024x731.png" alt="Unknown-3" width="768" height="548" srcset="http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-3-1024x731.png 1024w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-3-300x214.png 300w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-3-768x549.png 768w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-3.png 1344w" sizes="(max-width: 768px) 100vw, 768px" /> 
+<img class="aligncenter wp-image-875 size-large" src="wp-content/uploads/2016/03/Unknown-3-1024x731.png" alt="Unknown-3" width="768" height="548" srcset="wp-content/uploads/2016/03/Unknown-3-1024x731.png 1024w, wp-content/uploads/2016/03/Unknown-3-300x214.png 300w, wp-content/uploads/2016/03/Unknown-3-768x549.png 768w, wp-content/uploads/2016/03/Unknown-3.png 1344w" sizes="(max-width: 768px) 100vw, 768px" /> 
 
 This is great!  So now, we probably want to put a buffer around it so that the points are on the very edge.  The units we will use depend upon the units of the raster.  So in this case, it will be in degrees of lat/lon (which is a bit dodgy since they are not quite equal distance metrics but for our purposes it is just fine).
 
@@ -107,7 +107,7 @@ plot(baja_pts,add=T,col="darkred")
 plot(baja_pts,add=T,col="darkred",pch=16)
 plot(hull_plus_buffer, add=T, border="red")</pre>
 
-<img class="aligncenter wp-image-876 size-large" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2016/03/Unknown-4-1024x731.png" alt="Unknown-4" width="768" height="548" srcset="http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-4-1024x731.png 1024w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-4-300x214.png 300w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-4-768x549.png 768w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-4.png 1344w" sizes="(max-width: 768px) 100vw, 768px" /> Perfect!  Now, we need to only keep those components of our raster that are within the hull\_plus\_buffer polygon, and for this we use a mask.
+<img class="aligncenter wp-image-876 size-large" src="wp-content/uploads/2016/03/Unknown-4-1024x731.png" alt="Unknown-4" width="768" height="548" srcset="wp-content/uploads/2016/03/Unknown-4-1024x731.png 1024w, wp-content/uploads/2016/03/Unknown-4-300x214.png 300w, wp-content/uploads/2016/03/Unknown-4-768x549.png 768w, wp-content/uploads/2016/03/Unknown-4.png 1344w" sizes="(max-width: 768px) 100vw, 768px" /> Perfect!  Now, we need to only keep those components of our raster that are within the hull\_plus\_buffer polygon, and for this we use a mask.
 
 <pre class="lang:r decode:true ">pop_hull <- mask(bc,hull_plus_buffer)
 plot(pop_hull)
@@ -116,7 +116,7 @@ plot(baja_pts,add=T,col="darkred",pch=16)</pre>
 &nbsp;
 
 <p class="p1">
-  <img class="aligncenter wp-image-878 size-large" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2016/03/Unknown-5-1024x731.png" alt="Unknown-5" width="768" height="548" srcset="http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-5-1024x731.png 1024w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-5-300x214.png 300w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-5-768x549.png 768w, http://localhost/wordpress/wp-content/uploads/2016/03/Unknown-5.png 1344w" sizes="(max-width: 768px) 100vw, 768px" />
+  <img class="aligncenter wp-image-878 size-large" src="wp-content/uploads/2016/03/Unknown-5-1024x731.png" alt="Unknown-5" width="768" height="548" srcset="wp-content/uploads/2016/03/Unknown-5-1024x731.png 1024w, wp-content/uploads/2016/03/Unknown-5-300x214.png 300w, wp-content/uploads/2016/03/Unknown-5-768x549.png 768w, wp-content/uploads/2016/03/Unknown-5.png 1344w" sizes="(max-width: 768px) 100vw, 768px" />
 </p>
 
 Exact!  Now, when you run this raster and these points through <span class="lang:r decode:true crayon-inline ">gdistance</span> , you will be using a more minimal set of raster data for the calculations and it will be more efficient—and reduce the thermal load you are imposing on your laptop!

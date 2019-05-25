@@ -11,4 +11,4 @@ The [Johnson](http://www.vcuderekjohnson.com/) and [Dyer](http://dyerlab.bio.vcu
 
 <!--more-->
 
-<img class="alignnone size-full wp-image-704" src="http://localhost/wordpress/wp-content/uploads/2015/11/nsf_logo.png" alt="nsf_logo" width="392" height="71" srcset="http://localhost/wordpress/wp-content/uploads/2015/11/nsf_logo.png 392w, http://localhost/wordpress/wp-content/uploads/2015/11/nsf_logo-300x54.png 300w" sizes="(max-width: 392px) 100vw, 392px" />
+<img class="alignnone size-full wp-image-704" src="wp-content/uploads/2015/11/nsf_logo.png" alt="nsf_logo" width="392" height="71" srcset="wp-content/uploads/2015/11/nsf_logo.png 392w, wp-content/uploads/2015/11/nsf_logo-300x54.png 300w" sizes="(max-width: 392px) 100vw, 392px" />

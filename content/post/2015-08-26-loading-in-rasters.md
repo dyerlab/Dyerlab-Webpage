@@ -26,7 +26,7 @@ Loading required package: sp</pre>
 plot(r)
 </pre>
 
-<img class="alignnone size-full wp-image-604" src="http://localhost/wordpress/wp-content/uploads/2015/08/Rplot.png" alt="Rplot" width="949" height="717" srcset="http://localhost/wordpress/wp-content/uploads/2015/08/Rplot.png 949w, http://localhost/wordpress/wp-content/uploads/2015/08/Rplot-300x227.png 300w, http://localhost/wordpress/wp-content/uploads/2015/08/Rplot-768x580.png 768w" sizes="(max-width: 949px) 100vw, 949px" /> 
+<img class="alignnone size-full wp-image-604" src="wp-content/uploads/2015/08/Rplot.png" alt="Rplot" width="949" height="717" srcset="wp-content/uploads/2015/08/Rplot.png 949w, wp-content/uploads/2015/08/Rplot-300x227.png 300w, wp-content/uploads/2015/08/Rplot-768x580.png 768w" sizes="(max-width: 949px) 100vw, 949px" /> 
 
 We can see what the raster relates to by looking at the extent.
 

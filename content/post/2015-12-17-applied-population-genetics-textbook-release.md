@@ -27,14 +27,14 @@ This book will be published in both ibook and print-on-demand versions.  I prefe
 
 The drawback is that ibook is limited to OSX and iOS devices at this time—which is why I will also be making it available as a print-on-demand text (though the interactive content will not obviously be included).  The complete text is scheduled to be made available by the end of the academic year and I will be using it as the primary source in my Spring courses of _Population Genetics_ BIOL516 and _Landscape Genetics_ ENVS 692
 
-<img class="aligncenter size-medium wp-image-725" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.18.07-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.18.07 AM" width="229" height="300" /> 
+<img class="aligncenter size-medium wp-image-725" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.18.07-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.18.07 AM" width="229" height="300" /> 
 
 &nbsp;
 
 <table>
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-730" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.27.57-AM-230x300.png" alt="Screen Shot 2015-12-17 at 6.27.57 AM" width="230" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.27.57-AM-230x300.png 230w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.27.57-AM.png 497w" sizes="(max-width: 230px) 100vw, 230px" />
+      <img class="aligncenter size-medium wp-image-730" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.27.57-AM-230x300.png" alt="Screen Shot 2015-12-17 at 6.27.57 AM" width="230" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.27.57-AM-230x300.png 230w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.27.57-AM.png 497w" sizes="(max-width: 230px) 100vw, 230px" />
     </td>
     
     <td>
@@ -64,7 +64,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-731" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.28.05-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.05 AM" width="229" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.05-AM-229x300.png 229w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.05-AM.png 498w" sizes="(max-width: 229px) 100vw, 229px" />
+      <img class="aligncenter size-medium wp-image-731" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.05-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.05 AM" width="229" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.05-AM-229x300.png 229w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.05-AM.png 498w" sizes="(max-width: 229px) 100vw, 229px" />
     </td>
     
     <td>
@@ -85,7 +85,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-732" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.28.29-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.29 AM" width="229" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.29-AM-229x300.png 229w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.29-AM.png 734w" sizes="(max-width: 229px) 100vw, 229px" />
+      <img class="aligncenter size-medium wp-image-732" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.29-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.29 AM" width="229" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.29-AM-229x300.png 229w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.29-AM.png 734w" sizes="(max-width: 229px) 100vw, 229px" />
     </td>
     
     <td>
@@ -109,7 +109,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-733" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.28.38-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.38 AM" width="229" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.38-AM-229x300.png 229w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.38-AM.png 735w" sizes="(max-width: 229px) 100vw, 229px" />
+      <img class="aligncenter size-medium wp-image-733" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.38-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.38 AM" width="229" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.38-AM-229x300.png 229w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.38-AM.png 735w" sizes="(max-width: 229px) 100vw, 229px" />
     </td>
     
     <td>
@@ -136,7 +136,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-734" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.28.49-AM-230x300.png" alt="Screen Shot 2015-12-17 at 6.28.49 AM" width="230" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.49-AM-230x300.png 230w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.49-AM.png 736w" sizes="(max-width: 230px) 100vw, 230px" />
+      <img class="aligncenter size-medium wp-image-734" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.49-AM-230x300.png" alt="Screen Shot 2015-12-17 at 6.28.49 AM" width="230" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.49-AM-230x300.png 230w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.49-AM.png 736w" sizes="(max-width: 230px) 100vw, 230px" />
     </td>
     
     <td>
@@ -163,7 +163,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-735" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.28.57-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.57 AM" width="229" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.57-AM-229x300.png 229w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.57-AM.png 735w" sizes="(max-width: 229px) 100vw, 229px" />
+      <img class="aligncenter size-medium wp-image-735" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.57-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.28.57 AM" width="229" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.57-AM-229x300.png 229w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.28.57-AM.png 735w" sizes="(max-width: 229px) 100vw, 229px" />
     </td>
     
     <td>
@@ -187,7 +187,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-736" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.33.51-AM-228x300.png" alt="Screen Shot 2015-12-17 at 6.33.51 AM" width="228" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.33.51-AM-228x300.png 228w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.33.51-AM.png 734w" sizes="(max-width: 228px) 100vw, 228px" />
+      <img class="aligncenter size-medium wp-image-736" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.33.51-AM-228x300.png" alt="Screen Shot 2015-12-17 at 6.33.51 AM" width="228" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.33.51-AM-228x300.png 228w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.33.51-AM.png 734w" sizes="(max-width: 228px) 100vw, 228px" />
     </td>
     
     <td>
@@ -214,7 +214,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-738" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-6.34.21-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.34.21 AM" width="229" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.34.21-AM-229x300.png 229w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.34.21-AM.png 734w" sizes="(max-width: 229px) 100vw, 229px" />
+      <img class="aligncenter size-medium wp-image-738" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.34.21-AM-229x300.png" alt="Screen Shot 2015-12-17 at 6.34.21 AM" width="229" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.34.21-AM-229x300.png 229w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-6.34.21-AM.png 734w" sizes="(max-width: 229px) 100vw, 229px" />
     </td>
     
     <td>
@@ -241,7 +241,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-743" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-230x300.png" alt="Screen Shot 2015-12-17 at 7.15.01 AM" width="230" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-230x300.png 230w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-768x1000.png 768w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-786x1024.png 786w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM.png 827w" sizes="(max-width: 230px) 100vw, 230px" />
+      <img class="aligncenter size-medium wp-image-743" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-230x300.png" alt="Screen Shot 2015-12-17 at 7.15.01 AM" width="230" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-230x300.png 230w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-768x1000.png 768w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM-786x1024.png 786w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.01-AM.png 827w" sizes="(max-width: 230px) 100vw, 230px" />
     </td>
     
     <td>
@@ -265,7 +265,7 @@ The drawback is that ibook is limited to OSX and iOS devices at this time—whic
   
   <tr>
     <td>
-      <img class="aligncenter size-medium wp-image-744" src="http://dyerlab.bio.vcu.edu/wp-content/uploads/sites/4831/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-229x300.png" alt="Screen Shot 2015-12-17 at 7.15.09 AM" width="229" height="300" srcset="http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-229x300.png 229w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-768x1007.png 768w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-781x1024.png 781w, http://localhost/wordpress/wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM.png 820w" sizes="(max-width: 229px) 100vw, 229px" />
+      <img class="aligncenter size-medium wp-image-744" src="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-229x300.png" alt="Screen Shot 2015-12-17 at 7.15.09 AM" width="229" height="300" srcset="wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-229x300.png 229w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-768x1007.png 768w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM-781x1024.png 781w, wp-content/uploads/2015/12/Screen-Shot-2015-12-17-at-7.15.09-AM.png 820w" sizes="(max-width: 229px) 100vw, 229px" />
     </td>
     
     <td>
