@@ -3,7 +3,7 @@ title: January CES Faculty Meeting
 date: 2019-01-25T12:00:00+00:00
 date_end: 2019-01-25T13:00:00
 authors: 
-  - admin
+  - Rodney
 abstract: Here are the slides from the January Meeting.
 guid: https://dyerlab.ces.vcu.edu/?p=1262
 permalink: /2019/01/25/january-ces-faculty-meeting/

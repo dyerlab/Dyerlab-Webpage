@@ -17,8 +17,8 @@ A population graph is a network structure based upon inter-stratum conditional g
 5. Increment the number of loci being used.  
 
 
-## Making a Dummy Data Set.
 
-If you haven't already read the post on simulating random populations, you may want to go do so now.  It is [here]().
+
+
 
 

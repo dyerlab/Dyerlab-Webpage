@@ -1,0 +1,18 @@
+# Theme metadata
+name = "Dyerlab"
+
+# Is theme light or dark?
+light = false
+
+# Primary
+primary = "#FB8B24"
+
+# Menu
+menu_primary = "rgba(39, 35, 37, 1)"
+menu_text = "rgba(255,255,255,0.6)"
+menu_text_active = "rgba(255,255,255,1)"
+menu_title = "#fff"
+
+# Home sections
+home_section_odd = "rgba(71, 70, 61, 1)"
+home_section_even = "rgba(39, 35, 37, 1)"

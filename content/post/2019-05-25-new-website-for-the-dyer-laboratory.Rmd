@@ -1,0 +1,13 @@
+---
+title: New Website for the Dyer Laboratory
+author: Rodney
+date: '2019-05-25'
+slug: new-website-for-the-dyer-laboratory
+categories:
+  - Dyerlab
+tags:
+  - laboratory
+image:
+  caption: ''
+  focal_point: ''
+---

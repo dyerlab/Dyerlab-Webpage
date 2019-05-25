@@ -1,0 +1,11 @@
++++
+title = "Pollen movement in declining populations of California Valley oak, Quercus lobata: where have all the fathers gone?"
+date = 2002-09-01
+authors = ["VL Sork", "FW Davis", "PE Smouse", "VJ Apsit", "RJ Dyer", "JF Fernandez", "B Kuhn"]
+publication_types = ["2"]
+abstract = "The fragmented populations and reduced population densities that result from human disturbance are issues of growing importance in evolutionary and conservation biology. A key issue is whether remnant individuals become reproductively isolated. California Valley oak (Quercus lobata ) is a widely distributed, endemic species in California, increasingly jeopardized by anthropogenic changes in biota and land use. We studied pollen movement in a savannah population of Valley oak at Sedgwick Reserve, Santa Barbara County, to estimate effective number of pollen donors (N (ep) ) and average distance of effective pollen movement (delta). Using twogener, our recently developed hybrid model of paternity and genetic structure treatments that analyses maternal and progeny multilocus genotypes, we found that current N (ep) = 3.68 individuals. Based on an average adult density of d = 1.19 stems/ha, we assumed a bivariate normal distribution to model current average pollen dispersal distance (delta) and estimated delta= 64.8 m. We then deployed our parameter estimates in spatially explicit models of the Sedgwick population to evaluate the extent to which N (ep) may have changed, as a consequence of progressive stand thinning between 1944 and 1999. Assuming that pollen dispersal distance has not changed, we estimate N (ep) was 4.57 individuals in 1944, when stand density was 1.48. Both estimates indicate fewer effective fathers than one might expect for wind-pollinated species and fewer than observed elsewhere. The results presented here provide a basis for further refinements on modelling pollen movement. If the trends continue, then ongoing demographic attrition could further reduce neighbourhood size in Valley oak resulting in increased risk of reproductive failure and genetic isolation."
+featured = false
+publication = "*MOLECULAR ECOLOGY*"
+tags = ["California Valley oak", "genetic isolation", "pollen flow", "Quercus lobata", "twogener"]
+doi = "10.1046/j.1365-294X.2002.01574.x"
++++
