@@ -15,9 +15,8 @@ education:
     year: 1996
 email: "rjdyer@vcu.edu"
 interests:
+- Data Science 
 - Population Genetics
-- Data Literacy
-- Quantitive Analyses
 name: Rodney J. Dyer
 organizations:
 - name: Virginia Commonwealth University
@@ -43,3 +42,4 @@ date: 2004-08-25
 ---
 
 Rodney Dyer research interests include understanding how landscape configuration and alteration influence connectivity amongst native and introduced species.  This interest has led him develop expertise in theoretical and applied population & landscape genetics as well as developing novel methodologies and statistical tools necessary for understanding the spatial and ecological distribution of population genetic structure.
+
