@@ -1,0 +1,147 @@
+---
+title: Extracting Data from Rasters
+date: 2015-01-10T07:58:18+00:00
+guid: http://rampages.us/dyerlab/?p=278
+permalink: /2015/01/10/extracting-data-from-rasters/
+categories:
+  - Code
+  - Tutorials
+tags:
+  - Araptus attenuata
+  - Baja California
+  - ggplot2
+  - R
+  - raster
+---
+
+
+
+<p>This document shows you how to extract data from rasters.</p>
+<p> </p>
+<div id="getting-the-libraries" class="section level2">
+<h2>Getting The Libraries</h2>
+<p>First, I’ll load in some packages to get the ability to work with raster data and to load in the <em>Arapatus attenuatus</em> data set (it is part of the default <strong>gstudio</strong> package).</p>
+<pre class="r"><code>require(raster)</code></pre>
+<pre><code>## Loading required package: raster</code></pre>
+<pre><code>## Loading required package: sp</code></pre>
+<pre class="r"><code>require(gstudio)</code></pre>
+<pre><code>## Loading required package: gstudio</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;spdep&#39;:
+##   method   from
+##   plot.mst ape</code></pre>
+<pre><code>## Registered S3 method overwritten by &#39;gstudio&#39;:
+##   method               from    
+##   as.data.frame.genind adegenet</code></pre>
+</div>
+<div id="loading-and-cropping-rasters" class="section level2">
+<h2>Loading and Cropping Rasters</h2>
+<p>We can load in the raster, and then crop it to just the are we need. These rasters were downloaded from [<a href="http://www.worldclim.org/">http://www.worldclim.org</a>] and are much larger than the study area. This just makes it easier on the computer to not have to deal with such large areas. After cropping it, we will load in the annual precip and temperature data as well.</p>
+<pre class="r"><code>tmp &lt;- raster(&quot;alt_22.tif&quot;)
+e &lt;- extent(c(-115, -109, 22, 30))
+baja_alt &lt;- crop(tmp, e)
+baja_temp &lt;- crop(raster(&quot;bio1_22.tif&quot;), e)
+baja_prec &lt;- crop(raster(&quot;bio12_22.tif&quot;), e)</code></pre>
+</div>
+<div id="getting-example-data-from-araptus-attenuatus" class="section level2">
+<h2>Getting Example Data from <em>Araptus attenuatus</em></h2>
+<p>Now, lets grab the <em>Araptus</em> data and look at the data and plot out the locations.</p>
+<pre class="r"><code>library(ggplot2)
+data(arapat)
+summary(arapat)</code></pre>
+<pre><code>##       Species      Cluster      Population        ID         Latitude    
+##  Cape     : 75   CBP-C :150   32     : 19   101_10A:  1   Min.   :23.08  
+##  Mainland : 36   NBP-C : 84   75     : 11   101_1A :  1   1st Qu.:24.59  
+##  Peninsula:252   SBP-C : 18   Const  : 11   101_2A :  1   Median :26.25  
+##                  SCBP-A: 75   12     : 10   101_3A :  1   Mean   :26.25  
+##                  SON-B : 36   153    : 10   101_4A :  1   3rd Qu.:27.53  
+##                               157    : 10   101_5A :  1   Max.   :29.33  
+##                               (Other):292   (Other):357                  
+##    Longitude          LTRS          WNT            EN           EF     
+##  Min.   :-114.3   01:01 :147   03:03  :108   01:01  :225   01:01 :219  
+##  1st Qu.:-113.0   01:02 : 86   01:01  : 82   01:02  : 52   01:02 : 52  
+##  Median :-111.5   02:02 :130   01:03  : 77   02:02  : 38   02:02 : 90  
+##  Mean   :-111.7                02:02  : 62   03:03  : 22   NA&#39;s  :  2  
+##  3rd Qu.:-110.5                03:04  :  8   01:03  :  7               
+##  Max.   :-109.1                (Other): 15   (Other): 16               
+##                                NA&#39;s   : 11   NA&#39;s   :  3               
+##      ZMP           AML           ATPS          MP20    
+##  01:01 : 46   08:08  : 51   05:05  :155   05:07  : 64  
+##  01:02 : 51   07:07  : 42   03:03  : 69   07:07  : 53  
+##  02:02 :233   07:08  : 42   09:09  : 66   18:18  : 52  
+##  NA&#39;s  : 33   04:04  : 41   02:02  : 30   05:05  : 48  
+##               07:09  : 22   07:09  : 14   05:06  : 22  
+##               (Other):142   08:08  :  9   (Other):119  
+##               NA&#39;s   : 23   (Other): 20   NA&#39;s   :  5</code></pre>
+<pre class="r"><code>coords &lt;- strata_coordinates(arapat)</code></pre>
+<pre class="r"><code>##
+## This no longer works UNLESS you have a google API key
+## 
+library(ggmap)
+map &lt;- population_map(coords, map.source = &quot;stamen&quot;)
+ggmap( map ) + geom_point(aes(x=Longitude,y=Latitude), data=coords)</code></pre>
+</div>
+<div id="extracting-point-data" class="section level2">
+<h2>Extracting Point Data</h2>
+<p>To elevation, temperature and precipitation from the rasters for each sampling location, we need to translate them into points first. I’ll first grab the coordinate data as a <em>data.frame</em>.</p>
+<p>Then we can grab them using the normal functions in the <strong>sp</strong> library.</p>
+<pre class="r"><code>pts &lt;- SpatialPoints(coords[, 2:3])
+coords$elev &lt;- extract(baja_alt, pts)
+coords$temp &lt;- extract(baja_temp, pts)
+coords$prec &lt;- extract(baja_prec, pts)
+coords</code></pre>
+<pre><code>##     Stratum Longitude Latitude elev temp prec
+## 1        88 -114.2935 29.32541  681  178  143
+## 11        9 -113.9449 29.01457  361  195  148
+## 20       84 -113.6679 28.96651  368  197  124
+## 29      175 -113.4897 28.72796  240  205  106
+## 36      177 -113.9914 28.66056  177  203  120
+## 46      173 -112.8698 28.40846   26  223  102
+## 56      171 -113.1826 28.22308  522  195  145
+## 66       89 -113.3999 28.03661  290  203  117
+## 76      159 -113.3161 27.52944   87  211  123
+## 85      SFr -112.9640 27.36320  305  205  107
+## 94      160 -112.5296 27.40498  371  212  124
+## 104     162 -112.4080 27.20280  248  220  119
+## 114      12 -112.6655 27.18232  488  202  130
+## 124     161 -112.9860 27.03670   29  216   91
+## 134      93 -112.0461 26.94589   66  230   81
+## 144     165 -112.4095 26.24905   NA   NA   NA
+## 154     169 -111.3783 26.20876    6  238  134
+## 164      58 -111.3547 26.01550   12  240  129
+## 173     166 -112.0806 25.91409   70  224   84
+## 183      64 -111.3264 25.60521  397  214  245
+## 188     168 -111.2156 25.55757  354  217  235
+## 198      51 -111.6006 25.34819   80  222  140
+## 205   Const -111.6750 25.02470   50  217  127
+## 216      77 -110.6917 24.87611   52  231  193
+## 226     164 -111.5441 24.74642   35  213   95
+## 236      75 -110.7460 24.58843   21  231  166
+## 247     163 -110.9510 24.21150  196  219  127
+## 257    ESan -110.3686 24.45879    9  237  175
+## 265     153 -110.4624 24.13389   31  235  165
+## 275      48 -110.2725 24.21441  117  233  217
+## 285     156 -109.9890 24.04380    0  237  196
+## 291     157 -110.0960 24.01950  609  208  443
+## 301      73 -109.8507 24.00789  103  233  227
+## 311     Aqu -110.1043 23.28550  142  226  227
+## 319     Mat -110.1091 23.08984    5  234  159
+## 324      98 -109.6487 23.07570   75  237  233
+## 328     101 -110.5744 27.90509    8  249  244
+## 337      32 -109.3270 26.63783   18  244  337
+## 356     102 -109.1263 26.38014   10  245  346</code></pre>
+</div>
+<div id="plotting-trend-lines." class="section level2">
+<h2>Plotting Trend lines.</h2>
+<p>Cool, lets sort this by latitude</p>
+<pre class="r"><code>coords &lt;- coords[order(coords$Latitude), ]</code></pre>
+<p>and then plot out some values to look at what is going on.</p>
+<pre class="r"><code>ggplot(coords, aes(x = Latitude, y = elev)) + geom_line(color = &quot;gray&quot;) + theme_bw() + geom_text(aes(y = elev + 10, label = Stratum), color = &quot;blue&quot;)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_text).</code></pre>
+<p><img src="/post/2015-01-10/2015-01-10-extracting-data-from-rasters_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(coords, aes(x = Latitude, y = temp)) + geom_line(color = &quot;gray&quot;) + theme_bw() + geom_text(aes(y = temp + 5, label = Stratum), color = &quot;blue&quot;)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_text).</code></pre>
+<p><img src="/post/2015-01-10/2015-01-10-extracting-data-from-rasters_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(coords, aes(x = Latitude, y = prec)) + geom_line(color = &quot;gray&quot;) + theme_bw() + geom_text(aes(y = prec + 10, label = Stratum), color = &quot;blue&quot;)</code></pre>
+<pre><code>## Warning: Removed 1 rows containing missing values (geom_text).</code></pre>
+<p><img src="/post/2015-01-10/2015-01-10-extracting-data-from-rasters_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>

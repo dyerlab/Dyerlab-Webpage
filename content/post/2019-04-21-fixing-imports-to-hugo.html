@@ -1,0 +1,42 @@
+---
+title: Fixing Imports to Hugo
+date: '2019-04-21'
+slug: fixing-imports-to-hugo
+categories:
+  - IndieWeb
+tags:
+  - R
+  - dyerlab
+---
+
+
+
+<p>The solution to this, is to recognize that a lot of the content I make (in fact most of it) will be presented as output from R Markdown. The tutorials I create, the analyses I do, etc. As such, why not start with an R Markdown file in the first place and go from there? Enter <code>blogdown</code></p>
+<pre class="r"><code>devtools::install_github(&quot;rstudio/blogdown&quot;)</code></pre>
+<p>I then had to install python3 and pip to get the <code>academic</code> Hugo theme going.</p>
+<pre class="bash"><code>brew update
+brew install python3
+pip3 install academic</code></pre>
+<p>I then went and grabbed a BibTex file of my publications from Web Of Science. Not all of them are there but it gets things going. Then I had the hugo academic import them into the site.</p>
+<pre class="bash"><code>academic import --bibtex ~/Downloads/savedrecs.bib </code></pre>
+<p>I quickly noticed a flaw in this approach as Web of Sciences labels each of the entries with the ISI number, which academic uses for naming within Hugo. This means absolutely nothing to me (e.g., instead of <code>DyerNason2004</code> that manuscript is noted as <code>ISI:000221933000001</code>—totally useless). So, I went back to the file and manually changed the entry titles. Not a big deal.</p>
+<p>I then imported them using the code above and it was good. I got a folder</p>
+<p><img src="/post/2019-04-21-fixing-imports-to-hugo_files/folders_of_publication_folders.png" /></p>
+<p>Now, to go fix a few other things.</p>
+<div id="fixing-tags" class="section level2">
+<h2>Fixing tags</h2>
+<p>By default, the import mechanism uses a semicolon separated list of tags from the keywords for each publication. Hugo assumes everything is just one long set of tag identifiers so tags like, <em>gene flow</em>, <em>popgraph</em>, and <em>genetic structure</em> are imported into Hugo as <em>gene-flow-popgraph-genetic-structure</em>, which is not the right thing. So I wrote the following quick script to loop though all the files just created make the right changes.</p>
+<pre class="r"><code>files = list.files(&quot;./content/publications/&quot;, pattern=&quot;index.md&quot;,full.names = TRUE,recursive = TRUE)
+files
+for( file in files ) {
+  print(file)
+  f &lt;- readr::read_file(file=file)
+  lines &lt;- strsplit(f,&quot;\n&quot;)
+  idx &lt;- which(lapply(lines, function(x) grepl(&quot;^tags&quot;, x) )[[1]])
+  if( length(idx) &gt; 0 ) {
+    lines[[1]][idx] &lt;- stringr::str_replace_all(lines[[1]][idx], &quot;; &quot;, &#39;\&quot;, \&quot;&#39;)
+    f &lt;- paste(lines[[1]], collapse=&quot;\n&quot;)
+    readr::write_file(f,path=file)
+  }
+}</code></pre>
+</div>

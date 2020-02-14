@@ -45,16 +45,19 @@ baja_prec <- crop(raster("bio12_22.tif"), e)
 Now, lets grab the _Araptus_ data and look at the data and plot out the locations.
 
 ```{r}
+library(ggplot2)
 data(arapat)
 summary(arapat)
+coords <- strata_coordinates(arapat)
 ```
 
 
 
-```{r}
-library(ggplot2)
+```{r eval = FALSE}
+##
+## This no longer works UNLESS you have a google API key
+## 
 library(ggmap)
-coords <- strata_coordinates(arapat)
 map <- population_map(coords, map.source = "stamen")
 ggmap( map ) + geom_point(aes(x=Longitude,y=Latitude), data=coords)
 ```
