@@ -79,7 +79,7 @@ library(raster)
 Then we can load in one of these files using the `raster()` function and passing it the path to the file *relative to this document*.
 
 ```{r}
-elev <- raster("data/alt_22.tif")
+elev <- raster("../data/alt_22.tif")
 elev
 ```
 
@@ -169,7 +169,7 @@ We are going to use our way cool piping function `%>%` to:
  3. turn it into a `data.frame` object
 
 ```{r}
-raster("data/alt_22.tif") %>%
+raster("../data/alt_22.tif") %>%
   crop( extent( -116, -108, 22, 30) ) %>%
   rasterToPoints() %>%
   data.frame() -> baja_df

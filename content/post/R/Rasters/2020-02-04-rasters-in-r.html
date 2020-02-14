@@ -1,0 +1,229 @@
+---
+title: Rasters In R
+author: Rodney Dyer
+date: '2020-02-04'
+slug: rasters-in-r
+categories:
+  - R
+tags:
+  - raster
+  - ggplot2
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+subtitle: ''
+summary: 'An overview of how to work with Rasters in R.'
+---
+
+
+
+<p>This notebook will take a basic overview of raster data.</p>
+<p>Rasters are a form of data that is georeferenced and (somewhat) continuous. Raster data is perhaps best envisioned as a matrix of values, whose entries represent spatially referenced data points. The raster itself can be visualized as you could for normal matrix output. What makes a raster different, however, is that it is (or should be) georeferenced. This means that each element of the matrix represents some measurement on the ground having a specific location and spread. This is analogous to an image, where if you zoom in on it enough, you will be able to differentiate between individual pixels, it is just that for rasters, each pixel has a spatial location and size associated with it that we can map onto the earth.</p>
+<p>You can either create raster objects <em>de novo</em> or you can acquire them from some external source. To create one from scratch, you start with a matrix of values and then construct the raster object using the <code>raster()</code> function as:</p>
+<pre class="r"><code>library(raster)</code></pre>
+<pre><code>## Loading required package: sp</code></pre>
+<pre class="r"><code>r &lt;- matrix(runif(10000),nrow=100)
+rnd &lt;- raster( r )
+rnd</code></pre>
+<pre><code>## class      : RasterLayer 
+## dimensions : 100, 100, 10000  (nrow, ncol, ncell)
+## resolution : 0.01, 0.01  (x, y)
+## extent     : 0, 1, 0, 1  (xmin, xmax, ymin, ymax)
+## crs        : NA 
+## source     : memory
+## names      : layer 
+## values     : 3.676349e-05, 0.9999721  (min, max)</code></pre>
+<p>which can be visualized using the normal plot command. The raster library has overridden several of the plotting functions and you can plot raster objects and decorate the images in the same way you do for normal plotting materials (<a href="#graphics"><strong>??</strong></a>).</p>
+<pre class="r"><code>plot(rnd)</code></pre>
+<p><img src="/post/R/Rasters/2020-02-04-rasters-in-r_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div id="raster-structure" class="section level2">
+<h2>Raster Structure</h2>
+<p>A Raster is simply a matrix of values, and in fact, we can get to the contents of the raster data using the function <code>values()</code> (these R people are sneaky!)</p>
+<pre class="r"><code>values(rnd) -&gt; x
+class(x)</code></pre>
+<pre><code>## [1] &quot;numeric&quot;</code></pre>
+<pre class="r"><code>head(x)</code></pre>
+<pre><code>## [1] 0.5657748 0.7406126 0.9772058 0.9305299 0.4996966 0.8370530</code></pre>
+<p>Just like any other matrix, we can do operations on the contents of the raster itself.</p>
+<pre class="r"><code>values( rnd ) &lt;- values(rnd) * -1 
+plot(rnd)</code></pre>
+<p><img src="/post/R/Rasters/2020-02-04-rasters-in-r_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+</div>
+<div id="loading-rasters-from-files" class="section level2">
+<h2>Loading Rasters from Files</h2>
+<p>Rasters come in many formats and there is a wide array of file types that we can import. For simplicity, we are going to use GeoTIFF formats for input because they represent a large fraction of content we may need to get.</p>
+<p>From the Blackboard site, download the <code>data.zip</code> file and uncomprtess it in the same folder as this notebook. You <strong>are</strong> using RStudio as a project, right? It should decompress into a folder called <code>data</code> and if you look into it it will have the following data files.</p>
+<pre class="r"><code>list.files(path=&quot;./data&quot;)</code></pre>
+<pre><code>## character(0)</code></pre>
+<p>Some of these are raw text files (the .csv files), some are <code>R</code> data (the .rda), some are netCDF files (the .nc) and the rest are GeoTiff files (the .tif ones).</p>
+<p>To load in the data, we first load in the <code>raster</code> library<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<pre class="r"><code>library(raster)</code></pre>
+<p>Then we can load in one of these files using the <code>raster()</code> function and passing it the path to the file <em>relative to this document</em>.</p>
+<pre class="r"><code>elev &lt;- raster(&quot;../data/alt_22.tif&quot;)
+elev</code></pre>
+<pre><code>## class      : RasterLayer 
+## dimensions : 3600, 3600, 12960000  (nrow, ncol, ncell)
+## resolution : 0.008333333, 0.008333333  (x, y)
+## extent     : -120, -90, 0, 30  (xmin, xmax, ymin, ymax)
+## crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
+## source     : /Users/rodney/Desktop/Dyerlab-Webpage/content/post/R/data/alt_22.tif 
+## names      : alt_22 
+## values     : -202, 5469  (min, max)</code></pre>
+<p>Take a minute and look at the raster funciton help file.</p>
+<pre class="r"><code>?raster</code></pre>
+<p>For an object like a <code>raster</code> we can identify some basic commands they understand and know how to do.</p>
+<pre class="r"><code>methods( class=&quot;raster&quot; )</code></pre>
+<pre><code>## [1] [         [&lt;-       anyNA     as.matrix as.raster is.na     Ops      
+## [8] plot      print    
+## see &#39;?methods&#39; for accessing help and source code</code></pre>
+<p>So, it is clear that we can plot the raster using the normal plotting commands (don’t worry, <code>ggplot</code> comes into play in a little bit).</p>
+<pre class="r"><code>plot( elev, xlab=&quot;Longitude&quot;, ylab=&quot;Latitude&quot;, col)</code></pre>
+<p><img src="/post/R/Rasters/2020-02-04-rasters-in-r_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Congratulations!!!!! You did it.</p>
+</div>
+<div id="cropping-rasters" class="section level2">
+<h2>Cropping Rasters</h2>
+<p>That is a rather large extent we are dealing with and for the purpose of our needs, we are going to only use a subset of that big raster. To do this, we need to define an extent (e.g., the bounding box in terms of minimum and maximum longitude and latitude that we want) and then create a new raster that is a cut-out of the previous one.</p>
+<pre class="r"><code>?extent</code></pre>
+<p>Let’s make an extent that contains just the Baja California section.</p>
+<pre class="r"><code>e &lt;- extent( -116, -108, 22, 30)
+e</code></pre>
+<pre><code>## class      : Extent 
+## xmin       : -116 
+## xmax       : -108 
+## ymin       : 22 
+## ymax       : 30</code></pre>
+<p>We can do this by <code>eyeballing</code> it, or use an interactive plotting on the raster (and the old mouse) to get some points. There is a great function for this called <code>click()</code>.</p>
+<pre class="r"><code>?click</code></pre>
+<p>And can be used like the code below. This is an interactive thing, so I am not going to run the chunk below (notice the <code>eval=FALSE</code> code in the first line of the chunk), do it IRL and you will see the output of the x, y, and the value of the cell you are clicking on printed out to the console.</p>
+<pre class="r"><code>plot(elev)
+click( elev, xy=TRUE, n=2 )</code></pre>
+<p>The <code>click()</code> function can create points, line, polygons, have them plotted, or whatever you like. Quite helpful. But for our purposes, we just need it to identify the extent of Baja California and then we will use that to <code>crop()</code> the original raster.</p>
+<pre class="r"><code>baja_elev &lt;- crop( elev, e )
+baja_elev</code></pre>
+<pre><code>## class      : RasterLayer 
+## dimensions : 960, 960, 921600  (nrow, ncol, ncell)
+## resolution : 0.008333333, 0.008333333  (x, y)
+## extent     : -116, -108, 22, 30  (xmin, xmax, ymin, ymax)
+## crs        : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0 
+## source     : memory
+## names      : alt_22 
+## values     : -202, 2774  (min, max)</code></pre>
+<p>Which now looks like:</p>
+<pre class="r"><code>plot( baja_elev, 
+      xlab=&quot;Longitude&quot;,
+      ylab=&quot;Latitude&quot;,
+      main = &quot;Elevation for Baja California&quot;,
+      col = terrain.colors( 50 ) )</code></pre>
+<p><img src="/post/R/Rasters/2020-02-04-rasters-in-r_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>Now that we have the elevation for our target region, we can delete the big raster from our memory.</p>
+<pre class="r"><code>rm( elev )</code></pre>
+</div>
+<div id="ggplot-and-rasters" class="section level2">
+<h2><code>GGPlot</code> and Rasters</h2>
+<p>As you probably can guess, <code>ggplot</code> has the ability to do this kind of work as well.</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<p>We are going to use our way cool piping function <code>%&gt;%</code> to:<br />
+1. load in the raster,<br />
+2. crop it to the extent we want<br />
+3. turn it into a <code>data.frame</code> object</p>
+<pre class="r"><code>raster(&quot;../data/alt_22.tif&quot;) %&gt;%
+  crop( extent( -116, -108, 22, 30) ) %&gt;%
+  rasterToPoints() %&gt;%
+  data.frame() -&gt; baja_df
+
+summary( baja_df )</code></pre>
+<pre><code>##        x                y             alt_22      
+##  Min.   :-115.8   Min.   :22.88   Min.   :-202.0  
+##  1st Qu.:-112.3   1st Qu.:26.64   1st Qu.:  96.0  
+##  Median :-110.6   Median :27.93   Median : 315.0  
+##  Mean   :-110.9   Mean   :27.65   Mean   : 501.9  
+##  3rd Qu.:-109.2   3rd Qu.:29.05   3rd Qu.: 683.0  
+##  Max.   :-108.0   Max.   :30.00   Max.   :2774.0</code></pre>
+<p>What this did was make a large <code>data.frame</code> object that we will use for plotting. It is rather large.</p>
+<pre class="r"><code>dim( baja_df )</code></pre>
+<pre><code>## [1] 318933      3</code></pre>
+<p>Now, we can plot it using the <code>geom_tile()</code> or it’s identical twin (that is a bit faster in execution) <code>geom_raster()</code> functions.</p>
+<pre class="r"><code>baja_df %&gt;%
+  ggplot( aes(x,y,fill=alt_22) ) + 
+  geom_raster() + 
+  coord_equal()</code></pre>
+<p><img src="/post/R/Rasters/2020-02-04-rasters-in-r_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>We can adjust the color ramp to be more approriate as:</p>
+<pre class="r"><code>baja_df %&gt;%
+  ggplot( aes(x,y,fill=alt_22) ) + 
+  geom_raster() + 
+  coord_equal() + 
+  scale_fill_gradientn( name=&quot;Elevation (m)&quot;, 
+                        colours = terrain.colors(100)) + 
+  theme_bw() + 
+  xlab(&quot;Longitude&quot;) + ylab(&quot;Latitude&quot;)</code></pre>
+<p><img src="/post/R/Rasters/2020-02-04-rasters-in-r_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="extracting-data-from-rasters" class="section level2">
+<h2>Extracting Data From Rasters</h2>
+<p>OK, it is all nice an good that we can make, load, manipulate, and plot rasters, what about extracting raw data from them?</p>
+<p>To extract data at points, we need to identify the points.</p>
+<pre class="r"><code>Cities &lt;- c(&quot;Cabo San Lucas&quot;, &quot;La Pax&quot;, &quot;Loreto&quot;, &quot;San Javier&quot;)
+Longitude &lt;- c(-109.916, -110.310, -111.343, -111.544)
+Latitude &lt;- c(22.890, 25.144, 26.012, 25.860 )
+
+cities_df &lt;- data.frame(Cities, Longitude, Latitude)
+
+summary( cities_df )</code></pre>
+<pre><code>##     Cities            Longitude         Latitude    
+##  Length:4           Min.   :-111.5   Min.   :22.89  
+##  Class :character   1st Qu.:-111.4   1st Qu.:24.58  
+##  Mode  :character   Median :-110.8   Median :25.50  
+##                     Mean   :-110.8   Mean   :24.98  
+##                     3rd Qu.:-110.2   3rd Qu.:25.90  
+##                     Max.   :-109.9   Max.   :26.01</code></pre>
+<p>Now let’s plot this.</p>
+<pre class="r"><code>library( ggrepel )
+baja_df %&gt;%
+  ggplot( ) + 
+  geom_raster( aes(x,y,fill=alt_22) ) + 
+  geom_label_repel( aes(x = Longitude, 
+                        y = Latitude, 
+                        label = Cities), 
+                    data=cities_df) + 
+  coord_equal() + 
+  scale_fill_gradientn( name=&quot;Elevation (m)&quot;, 
+                        colours = terrain.colors(100)) + 
+  theme_bw() + 
+  xlab(&quot;Longitude&quot;) + ylab(&quot;Latitude&quot;)  </code></pre>
+<p><img src="/post/R/Rasters/2020-02-04-rasters-in-r_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>To extract the data, we need to identify the items listed in the data frame as representing “Longitude” and “Latitude” objects and make it a type of data that can be</p>
+<pre class="r"><code>city_pts &lt;- SpatialPoints( cbind(Longitude, Latitude) )
+city_pts</code></pre>
+<pre><code>## class       : SpatialPoints 
+## features    : 4 
+## extent      : -111.544, -109.916, 22.89, 26.012  (xmin, xmax, ymin, ymax)
+## crs         : NA</code></pre>
+<p>Next <em>AND THIS IS EXTREMELY IMPORTANT</em>, we need to specify the <em>Coordinate Reference System</em> for these data. Notice how ours is missing,</p>
+<pre class="r"><code>crs( city_pts )</code></pre>
+<pre><code>## CRS arguments: NA</code></pre>
+<p>What we want to do is make it the same as the raster we will be extracting data from.</p>
+<pre class="r"><code>crs( baja_elev )</code></pre>
+<pre><code>## CRS arguments:
+##  +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</code></pre>
+<p>To do this, we assign the <code>crs</code> of the raster to the points. <strong>THIS IS NOT A RE-PROJECTIONS OF THE POINTS, THESE ARE ALERADY IN THE SAME PROJECTION, WE ARE JUST TELLING R WHAT THEY ARE</strong></p>
+<pre class="r"><code>crs( city_pts ) &lt;- crs( baja_elev )
+city_pts</code></pre>
+<pre><code>## class       : SpatialPoints 
+## features    : 4 
+## extent      : -111.544, -109.916, 22.89, 26.012  (xmin, xmax, ymin, ymax)
+## crs         : +proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0</code></pre>
+<p>We will come back to reprojecting points, lines, and polygons later.</p>
+<p>Now we can do the extraction.</p>
+<pre class="r"><code>raster::extract( baja_elev, city_pts )</code></pre>
+<pre><code>## [1]  11  NA   7 409</code></pre>
+<p>Why might that second point be missing?</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>If you do not have it installed, just type <code>install.packages(&quot;raster&quot;)</code> and it will be installed on your machine<a href="#fnref1" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
