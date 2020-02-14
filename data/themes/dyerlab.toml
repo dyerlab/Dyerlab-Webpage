@@ -8,7 +8,12 @@ light = false
 primary = "#FB8B24"
 
 # Menu
-menu_primary = "rgba(39, 35, 37, 1)"
+#menu_primary = "rgba(39, 35, 37, 1)"
+#menu_text = "rgba(255,255,255,0.6)"
+#menu_text_active = "rgba(255,255,255,1)"
+#menu_title = "#fff"
+
+menu_primary = "rgba(45, 49, 66, 1)"
 menu_text = "rgba(255,255,255,0.6)"
 menu_text_active = "rgba(255,255,255,1)"
 menu_title = "#fff"
