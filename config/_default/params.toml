@@ -25,6 +25,12 @@ twitter = "dyerlab"
 #   To enable, place an image in `static/img/` and reference its filename below. To disable, set the value to "".
 logo = ""
 
+## Some stuff for highlighting
+# Enable global source code highlighting? true/false
+# Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
+highlight = true
+highlight_languages = ["r","c","swift", "go"]  # Add support for highlighting additional languages
+highlight_style = "solarized-dark"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
 
 
 # Enable global LaTeX math rendering?
