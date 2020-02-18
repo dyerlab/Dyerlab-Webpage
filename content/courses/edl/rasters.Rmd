@@ -1,0 +1,30 @@
+---
+title: Rasters
+author: Rodney Dyer
+date: '2020-02-17'
+categories:
+  - R
+tags:
+  - raster
+menu:
+  edl:
+    parent: Environmental Data Literacy
+    weight: 3
+weight: 3
+type: docs
+---
+
+
+```{r}
+library(raster)
+r <- matrix(runif(10000),nrow=100)
+rnd <- raster( r )
+rnd
+```
+
+
+
+```{r}
+plot( rnd )
+```
+

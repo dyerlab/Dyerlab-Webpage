@@ -1,0 +1,33 @@
+---
+title: Rasters
+author: Rodney Dyer
+date: '2020-02-17'
+categories:
+  - R
+tags:
+  - raster
+menu:
+  edl:
+    parent: Environmental Data Literacy
+    weight: 3
+weight: 3
+type: docs
+---
+
+
+
+<pre class="r"><code>library(raster)</code></pre>
+<pre><code>## Loading required package: sp</code></pre>
+<pre class="r"><code>r &lt;- matrix(runif(10000),nrow=100)
+rnd &lt;- raster( r )
+rnd</code></pre>
+<pre><code>## class      : RasterLayer 
+## dimensions : 100, 100, 10000  (nrow, ncol, ncell)
+## resolution : 0.01, 0.01  (x, y)
+## extent     : 0, 1, 0, 1  (xmin, xmax, ymin, ymax)
+## crs        : NA 
+## source     : memory
+## names      : layer 
+## values     : 0.0001137725, 0.9999099  (min, max)</code></pre>
+<pre class="r"><code>plot( rnd )</code></pre>
+<p><img src="/courses/edl/rasters_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
