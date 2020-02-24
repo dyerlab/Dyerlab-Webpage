@@ -34,7 +34,7 @@ class: inverse, center, middle
 class: center, middle
 
 ```{r}
-knitr::include_graphics("Dyer-1.png")
+knitr::include_graphics("https://live.staticflickr.com/65535/49580297727_940f97cdc9_b_d.jpg")
 ```
 
 
@@ -42,7 +42,7 @@ knitr::include_graphics("Dyer-1.png")
 class: center, middle
 
 ```{r}
-knitr::include_graphics("Dyer-2.png")
+knitr::include_graphics("https://live.staticflickr.com/65535/49580297707_0f257daa0b_b_d.jpg")
 ```
 
 
@@ -50,7 +50,7 @@ knitr::include_graphics("Dyer-2.png")
 class: center, middle
 
 ```{r}
-knitr::include_graphics("Dyer-3.png")
+knitr::include_graphics("https://live.staticflickr.com/65535/49579570468_39a7cbd1d3_b_d.jpg")
 ```
 
 
@@ -58,7 +58,7 @@ knitr::include_graphics("Dyer-3.png")
 class: center, middle
 
 ```{r}
-knitr::include_graphics("Dyer-4.png")
+knitr::include_graphics("https://live.staticflickr.com/65535/49580297677_00d10db0c7_b_d.jpg")
 ```
 
 
@@ -66,7 +66,7 @@ knitr::include_graphics("Dyer-4.png")
 class: center, middle
 
 ```{r}
-knitr::include_graphics("Dyer-5.png")
+knitr::include_graphics("https://live.staticflickr.com/65535/49580297662_afc89a8590_b_d.jpg")
 ```
 
 
@@ -74,7 +74,7 @@ knitr::include_graphics("Dyer-5.png")
 class: center, middle
 
 ```{r}
-knitr::include_graphics("Dyer-6.png")
+knitr::include_graphics("https://live.staticflickr.com/65535/49579570458_240ef6a705_b_d.jpg")
 ```
 
 
