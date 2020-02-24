@@ -7,3 +7,4 @@ public/
 resources/*
 
 content/courses/edl/*.html
+static/rmarkdown-libs/
