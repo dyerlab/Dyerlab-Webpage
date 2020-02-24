@@ -10,12 +10,10 @@ tags:
   - gene flow
   - genetic structure
   - landscape genetics
-authors: []
 featured: no
 image:
   caption: ''
   focal_point: ''
-subtitle: ''
 summary: 'A guest lecture in ENVS102: Environmental Studies II.'
 ---
 
