@@ -4,4 +4,6 @@ public/
 .DS_Store
 .Rhistory
 
-resources/
+resources/*
+
+content/courses/edl/*.html
