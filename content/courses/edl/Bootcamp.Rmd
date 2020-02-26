@@ -1,6 +1,6 @@
 ---
 title: Bootcamp
-linktitle: "Bootcamps"
+linktitle: "Bootcamp"
 author: Rodney Dyer
 date: '2020-01-06'
 categories:

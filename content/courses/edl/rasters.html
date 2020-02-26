@@ -29,7 +29,7 @@ rnd</code></pre>
 ## crs        : NA 
 ## source     : memory
 ## names      : layer 
-## values     : 1.726695e-05, 0.9999992  (min, max)</code></pre>
+## values     : 0.000158892, 0.9996959  (min, max)</code></pre>
 <p>which can be visualized using the normal plot command. The raster library has overridden several of the plotting functions and you can plot raster objects and decorate the images in the same way you do for normal plotting materials (<a href="#graphics"><strong>??</strong></a>).</p>
 <pre class="r"><code>plot(rnd)</code></pre>
 <p><img src="/courses/edl/Rasters_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
@@ -40,7 +40,7 @@ rnd</code></pre>
 class(x)</code></pre>
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 <pre class="r"><code>head(x)</code></pre>
-<pre><code>## [1] 0.09057815 0.65286772 0.86839956 0.02783528 0.97958793 0.25392221</code></pre>
+<pre><code>## [1] 0.0314683 0.5027895 0.2455550 0.3369732 0.4356548 0.5411634</code></pre>
 <p>Just like any other matrix, we can do operations on the contents of the raster itself.</p>
 <pre class="r"><code>values( rnd ) &lt;- values(rnd) * -1 
 plot(rnd)</code></pre>
