@@ -8,5 +8,3 @@ resources/*
 
 content/courses/edl/*.html
 static/rmarkdown-libs/
-static/courses/*/figure-html/*
-static/courses/edl/*/figure-html/unnamed-chunk*
