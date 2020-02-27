@@ -11,8 +11,7 @@ tags:
 image: 
   caption: ''
   focal_point: ''
-header:
-  image: "https://live.staticflickr.com/65535/49592547092_c43a97a099_c_d.jpg"
 ---
 
 [Jane Remfert](https://dyerlab.org/authors/jane/) opened the Integrative Life Sciences Research Symposium this year with her presentation on Cultivar Gene Escape.
+
