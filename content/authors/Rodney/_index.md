@@ -43,5 +43,12 @@ date: 2004-08-25
 
 Rodney Dyer research interests include understanding how landscape configuration and alteration influence connectivity amongst native and introduced species.  This interest has led him develop expertise in theoretical and applied population & landscape genetics as well as developing novel methodologies and statistical tools necessary for understanding the spatial and ecological distribution of population genetic structure.
 
-![ORCID](/img/dyer/ORCID.png)
+Connection information: 
+- [Curriculum Vitae](https://docs.google.com/document/d/1B5DopW1PR12KhL3yiWiGf_YZCIXn1b77Er87mxqgShg/edit?usp=sharing)
+- [Google Scholar Profile](http://scholar.google.com/citations?user=R75bxRMAAAAJ)
+- [OrcID](http://orcid.org/0000-0003-4707-3453)
+- [Research Gate](https://www.researchgate.net/profile/Rodney_Dyer)
 
+
+
+<iframe src="https://calendar.google.com/calendar/embed?src=rjdyer%40vcu.edu&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
