@@ -44,9 +44,9 @@ date: 2004-08-25
 Rodney Dyer research interests include understanding how landscape configuration and alteration influence connectivity amongst native and introduced species.  This interest has led him develop expertise in theoretical and applied population & landscape genetics as well as developing novel methodologies and statistical tools necessary for understanding the spatial and ecological distribution of population genetic structure.
 
 Connection information: 
-- *Curriculum Vitae* [Full](https://docs.google.com/document/d/1B5DopW1PR12KhL3yiWiGf_YZCIXn1b77Er87mxqgShg/edit?usp=sharing) or [NIH Biosketch](https://docs.google.com/document/d/e/2PACX-1vRGnn_IbizJLz1jABQ5VPiTroeMmhVK_HQcomQxkNm8j7mrBleJ201XKbc/pub)  
+- *Curriculum Vitae:* [Full](https://docs.google.com/document/d/1B5DopW1PR12KhL3yiWiGf_YZCIXn1b77Er87mxqgShg/edit?usp=sharing) or [NIH Biosketch](https://docs.google.com/document/d/e/2PACX-1vRGnn_IbizJLz1jABQ5VPiTroeMmhVK_HQcomQxkNm8j7mrBleJ201XKbc/pub)  
 - [Google Scholar Profile](http://scholar.google.com/citations?user=R75bxRMAAAAJ)  
-- *Other Academic Profiles*:  [OrcID](http://orcid.org/0000-0003-4707-3453), [Research Gate](https://www.researchgate.net/profile/Rodney_Dyer)
+- *Other Academic Profiles:*  [OrcID](http://orcid.org/0000-0003-4707-3453), [Research Gate](https://www.researchgate.net/profile/Rodney_Dyer)
 
 
 
