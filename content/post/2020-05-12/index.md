@@ -17,7 +17,9 @@ image:
 This spring's Environmental Research Advosory Committee is set to be held virtually (as most things this odd year).  Here is a [link](https://docs.google.com/presentation/d/e/2PACX-1vRGW7wWzYIhRx8j5VXok8erI3IqQ3q8V8m9RD2wXmTLKG-bDviA8FWdlOzM7PkPPm1N1AQ5YvnZiULP/pub?start=false&loop=false&delayms=3000) to the slides that I'll be presenting.
 
 
-TL;DR: Mostly finished the following objectives but the lab has been <font color="red">closed</font> since March due to COVID and won't be open until after original end-date.
+```diff
+! TL;DR: Mostly finished the following objectives but the lab has been closed since March due to COVID and won't be open until after original end-date.
+```
 
 # Overview
 
