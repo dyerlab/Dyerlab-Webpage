@@ -18,10 +18,15 @@ This spring's Environmental Research Advosory Committee is set to be held virtua
 
 
 ```diff
-! TL;DR: Mostly finished the following objectives but the lab has been closed since March due to COVID and won't be open until after original end-date.
+! TL;DR: Mostly finished the following objectives but the lab has been closed 
+!        since March due to COVID.  Unknown opening date.
 ```
 
+---
+
 # Overview
+
+Below is an overview of the three objectives and a brief discussion of the current state of the research.
 
 ## Objective 1: Dealing with PCR Inhibitors.
 
